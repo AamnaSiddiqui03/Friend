@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -303,112 +303,6 @@
             <button class="cute-button" onclick="location.reload()">Relive Our Story 🔁</button>
           `;
     });
-  </script>
-</body>
-</html> -->
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fatima's Birthday Story</title>
-  <style>
-    body {
-      font-family: 'Patrick Hand', cursive;
-      background-color: #fff0f5;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .story-box {
-      font-size: 1.8rem;
-      background: white;
-      padding: 2rem;
-      margin: 2rem auto;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 700px;
-      min-height: 150px;
-    }
-
-    .nav-buttons {
-      margin-top: 1.5rem;
-    }
-
-    button {
-      font-size: 1.2rem;
-      padding: 0.6rem 1.2rem;
-      margin: 0 1rem;
-      border: none;
-      border-radius: 12px;
-      background-color: #ff69b4;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #ff1493;
-    }
-
-    .page-indicator {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-  <h1>🌸 Happy Birthday Fatima! 🌸</h1>
-  <div class="story-box" id="storyText">Loading story...</div>
-
-  <div class="nav-buttons">
-    <button id="prevBtn">⬅️ Previous</button>
-    <button id="nextBtn">Next ➡️</button>
-  </div>
-
-  <div class="page-indicator" id="pageIndicator"></div>
-
-  <script>
-    const stories = [
-      "Happy Birthday Fatima! 🥳 May Allah bless you with endless joy, glowing health, and a heart full of peace and love. Ameen.",
-      "Our official friendship started on 5th December 2023 💖. For the longest time, I doubted this friendship, but today I cherish it so much.",
-      "It was the best decision ever. I love you so much. From waiting for your replies to today — you coming to meet me means the world to me!",
-      "Through doubts, through distances, through silence — we still found our way to each other. That’s a real friendship, and that’s us. 💫",
-      "Every message, every laugh, every moment we've shared — it’s all special. You’ve become a very big part of my life, Fatima."
-    ];
-
-    let currentIndex = 0;
-    let typingInterval = null;
-
-    const storyText = document.getElementById("storyText");
-    const pageIndicator = document.getElementById("pageIndicator");
-
-    function showSlide(index) {
-      clearInterval(typingInterval);
-      storyText.textContent = stories[index];
-      pageIndicator.textContent = `Slide ${index + 1} of ${stories.length}`;
-    }
-
-    document.getElementById("nextBtn").addEventListener("click", () => {
-      if (currentIndex < stories.length - 1) {
-        currentIndex++;
-        showSlide(currentIndex);
-      }
-    });
-
-    document.getElementById("prevBtn").addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        showSlide(currentIndex);
-      }
-    });
-
-    // Initial load
-    showSlide(currentIndex);
   </script>
 </body>
 </html>
