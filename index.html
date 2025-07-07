@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -175,10 +175,31 @@
         delay: 7000,
       },
       {
-        bg: 'linear-gradient(135deg, #ff9a9e, #fad0c4)',
+        bg: 'fff3cd',
         image: 'https://media.tenor.com/P6FsFii7pnoAAAAM/hug-warm-hug.gif',
         message:
           "💖 You inspire me in ways I can’t even explain. I’ve learned to dream bigger, to be better, and to aim higher, all because of you. Your friendship has become my rainbow after the rain 🌈, showing me that no storm lasts forever, and after every struggle, there’s beauty waiting for us. Let's continue growing, being the best versions of ourselves, and supporting each other through everything life throws our way.",
+        delay: 7000,
+      },
+      {
+        bg: 'd4edda',
+        image: 'https://media.tenor.com/OhAj7i51mWUAAAAj/dudu-birthday-day-gif.gif',
+        message:
+          "✨ Happy Birthday, Fatimaa. May Allah always protect your heart, ease your worries, and bless your life with barakah and beauty. You are truly one of His kindest gifts to me. 🌷I pray you always smile, always rise, and always feel loved. Today is yours — and I’m so grateful you were born.",
+        delay: 7000,
+      },
+      {
+        bg: 'linear-gradient(135deg, #ff9a9e, #fad0c4)',
+        image: 'https://media.tenor.com/pUQGNMgYn1cAAAAj/tkthao219-bubududu.gif',
+        message:
+          "Our official friendship according to me started on 5th December 2023 — and honestly, I doubted it at first. From not knowing where we stood... To now, where you feel like home. From you not replying… to you showing up just to stop my tears. It was a journey. But it was the best decision ever. You made me feel so, so special.",
+        delay: 7000,
+      },
+      {
+        bg: 'linear-gradient(135deg, #ff9a9e, #fad0c4)',
+        image: 'https://media.tenor.com/lyUolkq7iNgAAAAj/madebychie-mocha-and-milk.gif',
+        message:
+          "I love, how much I love you. You’re the family I got to choose. The one friend I used to pray for. I genuinely care for you — and want your happiness like I want mine. Please take care of yourself. You are so special to everyone around you. I’ll always be in your corner, loving you in silence and out loud.",
         delay: 7000,
       },
     ];
@@ -282,6 +303,112 @@
             <button class="cute-button" onclick="location.reload()">Relive Our Story 🔁</button>
           `;
     });
+  </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fatima's Birthday Story</title>
+  <style>
+    body {
+      font-family: 'Patrick Hand', cursive;
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .story-box {
+      font-size: 1.8rem;
+      background: white;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 700px;
+      min-height: 150px;
+    }
+
+    .nav-buttons {
+      margin-top: 1.5rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+      padding: 0.6rem 1.2rem;
+      margin: 0 1rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    .page-indicator {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Happy Birthday Fatima! 🌸</h1>
+  <div class="story-box" id="storyText">Loading story...</div>
+
+  <div class="nav-buttons">
+    <button id="prevBtn">⬅️ Previous</button>
+    <button id="nextBtn">Next ➡️</button>
+  </div>
+
+  <div class="page-indicator" id="pageIndicator"></div>
+
+  <script>
+    const stories = [
+      "Happy Birthday Fatima! 🥳 May Allah bless you with endless joy, glowing health, and a heart full of peace and love. Ameen.",
+      "Our official friendship started on 5th December 2023 💖. For the longest time, I doubted this friendship, but today I cherish it so much.",
+      "It was the best decision ever. I love you so much. From waiting for your replies to today — you coming to meet me means the world to me!",
+      "Through doubts, through distances, through silence — we still found our way to each other. That’s a real friendship, and that’s us. 💫",
+      "Every message, every laugh, every moment we've shared — it’s all special. You’ve become a very big part of my life, Fatima."
+    ];
+
+    let currentIndex = 0;
+    let typingInterval = null;
+
+    const storyText = document.getElementById("storyText");
+    const pageIndicator = document.getElementById("pageIndicator");
+
+    function showSlide(index) {
+      clearInterval(typingInterval);
+      storyText.textContent = stories[index];
+      pageIndicator.textContent = `Slide ${index + 1} of ${stories.length}`;
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if (currentIndex < stories.length - 1) {
+        currentIndex++;
+        showSlide(currentIndex);
+      }
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        showSlide(currentIndex);
+      }
+    });
+
+    // Initial load
+    showSlide(currentIndex);
   </script>
 </body>
 </html>
